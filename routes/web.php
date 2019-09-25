@@ -22,3 +22,8 @@ Route::get('welcome',function (){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/products','HomeController@getform')->name('get.products');
+Route::get('/display-discount','HomeController@displayResult')->name('display.result');
+
+
+Route::post('/products','HomeController@postform')->name('post.products');

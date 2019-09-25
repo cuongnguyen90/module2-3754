@@ -25,4 +25,17 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function getform()
+    {
+        return view('layouts/product');
+    }
+
+    public function postform(Request $request)
+    {
+        $result = $request->price *  $request->percent * 0.1;
+
+
+        return view('layouts/display',compact('result'));
+    }
 }
